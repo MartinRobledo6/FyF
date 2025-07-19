@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo de fyf.jpg" type="image/png">
+    <title>FyF Productores de Seguros - Asesoramiento Integral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5493564628562" target="_blank" class="fixed bottom-24 right-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition duration-300 z-50" title="Chatea por WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10 w-auto" src="Imagenes\Logo de fyf.jpg" alt="FyF Productores de Seguros">
+                        <div class="text-2xl font-bold tracking-tight ml-4">FyF Productores de Seguros</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Inicio</a>
+                    <a href="#nosotros" class="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Nosotros</a>
+                    <a href="#servicios" class="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Servicios</a>
+                    <a href="#aseguradoras" class="text-blue-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Aseguradoras</a>
+                    <a href="https://wa.me/5493564628562" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-blue-900 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
+            <a href="#inicio" class="block text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium">Inicio</a>
+            <a href="#nosotros" class="block text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium">Nosotros</a>
+            <a href="#servicios" class="block text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium">Servicios</a>
+            <a href="#aseguradoras" class="block text-blue-900 hover:text-blue-600 px-3 py-2 text-base font-medium">Aseguradoras</a>
+            <a href="https://wa.me/5493564628562" class="block bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition duration-300 w-max mt-2">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg text-white pt-24 hero-clip-path">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Protege lo que más valoras con <span class="text-yellow-300">FyF Productores</span></h1>
+                    <p class="text-xl mb-8 text-blue-100">Más de 11 años de experiencia brindando soluciones integrales en seguros para personas y empresas.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://wa.me/5493564628562" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold text-center transition duration-300">Contactanos</a>
+                        <a href="#servicios" class="border-2 border-white text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-center transition duration-300">Nuestros Servicios</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="Imagenes\Logo de fyf.jpg" alt="Asesoramiento de seguros" class="rounded-lg shadow-2xl floating max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-blue-50 p-8 rounded-xl">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">11+</div>
+                    <div class="text-blue-900 font-medium">Años de Experiencia</div>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-xl">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">500+</div>
+                    <div class="text-blue-900 font-medium">Clientes Satisfechos</div>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-xl">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">3</div>
+                    <div class="text-blue-900 font-medium">Aseguradoras Aliadas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Nuestros Productores</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-1 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-md">
+                            <div class="flex items-center mb-6">
+                                <img src="Imagenes\Francisco Daniel Robledo.jpg" alt="Francisco Robledo" class="w-20 h-20 rounded-full object-cover mr-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-900">Francisco Daniel Robledo</h3>
+                                    <p class="text-blue-600">Productor Asesor de Seguros</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Matrícula N° 60453 - Desde 2004</p>
+                            <p class="text-gray-700">Con una vasta experiencia en el rubro, Francisco se especializa en brindar soluciones personalizadas para empresas y particulares, asegurando la mejor cobertura al mejor precio.</p>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-xl shadow-md">
+                            <div class="flex items-center mb-6">
+                                <img src="Imagenes\Maria Fernanda Grosso.jpg" alt="María Fernanda Grosso" class="w-20 h-20 rounded-full object-cover mr-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-blue-900">María Fernanda Grosso</h3>
+                                    <p class="text-blue-600">Productora Asesora de Seguros</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Matrícula N° 86985 - Desde 2017</p>
+                            <p class="text-gray-700">Fernanda se destaca por su atención personalizada y su enfoque en seguros de vida y ART, brindando tranquilidad y seguridad a sus clientes con un trato cálido y profesional.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">Nuestra Misión</h3>
+                        <p class="text-gray-700 mb-6">En FyF Productores de Seguros nos comprometemos a brindar asesoramiento profesional y personalizado, buscando siempre la mejor alternativa de cobertura para cada necesidad particular.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">Nuestros Valores</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="ml-3 text-gray-700">Transparencia en cada gestión</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="ml-3 text-gray-700">Compromiso con nuestros clientes</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="ml-3 text-gray-700">Excelencia en el servicio</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="ml-3 text-gray-700">Innovación constante</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">¿Por qué elegirnos?</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <li>Asesoramiento personalizado y sin cargo</li>
+                                <li>Amplia variedad de compañías aseguradoras</li>
+                                <li>Trámites ágiles y eficientes</li>
+                                <li>Atención personalizada durante todo el proceso</li>
+                                <li>Asistencia en siniestros y reclamos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Nuestros Servicios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Brindamos soluciones integrales en seguros para proteger lo que más valoras</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Seguros Patrimoniales</h3>
+                    <p class="text-gray-600 mb-4">Protege tu hogar, comercio o industria contra incendios, robos, daños y otros riesgos.</p>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                        <li>Seguro de Hogar</li>
+                        <li>Seguro de Comercio</li>
+                        <li>Seguro de Incendio</li>
+                        <li>Seguro de Responsabilidad Civil</li>
+                        <li>Seguro Integral de Caución</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Seguros de Vida</h3>
+                    <p class="text-gray-600 mb-4">Brindamos tranquilidad a tu familia con coberturas adaptadas a tus necesidades.</p>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                        <li>Seguro de Vida Individual</li>
+                        <li>Seguro de Vida Colectivo</li>
+                        <li>Seguro de Accidentes Personales</li>
+                        <li>Seguro de Salud</li>
+                        <li>Seguro de Sepelio</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase-medical text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">ART (Aseguradoras de Riesgos del Trabajo)</h3>
+                    <p class="text-gray-600 mb-4">Cumplimiento legal y protección para tus empleados ante accidentes laborales.</p>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                        <li>ART Obligatorio</li>
+                        <li>ART Complementario</li>
+                        <li>Asesoramiento en Higiene y Seguridad</li>
+                        <li>Gestión de Siniestros Laborales</li>
+                        <li>Capacitaciones</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-car text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Seguros Automotores</h3>
+                    <p class="text-gray-600 mb-4">Protección integral para tu vehículo ante cualquier eventualidad.</p>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                        <li>Seguro de Responsabilidad Civil</li>
+                        <li>Seguro Todo Riesgo</li>
+                        <li>Seguro de Robo y/o Incendio</li>
+                        <li>Seguro de Granizo</li>
+                        <li>Asistencia en Viaje</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-ship text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Seguros de Transporte</h3>
+                    <p class="text-gray-600 mb-4">Protección para tu carga durante el transporte terrestre, marítimo o aéreo.</p>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                        <li>Seguro de Transporte Terrestre</li>
+                        <li>Seguro de Transporte Marítimo</li>
+                        <li>Seguro de Transporte Aéreo</li>
+                        <li>Seguro de Rotura de Maquinaria</li>
+                        <li>Seguro de Montaje</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-plane text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Seguros de Viaje</h3>
+                    <p class="text-gray-600 mb-4">Viaja tranquilo con la mejor cobertura para imprevistos durante tu viaje.</p>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                        <li>Asistencia Médica en Viaje</li>
+                        <li>Cobertura por Cancelación</li>
+                        <li>Pérdida de Equipaje</li>
+                        <li>Responsabilidad Civil en Viaje</li>
+                        <li>Asistencia Legal en el Exterior</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Companies Section -->
+    <section id="aseguradoras" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Trabajamos con las mejores aseguradoras</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Acceso a múltiples compañías para ofrecerte la mejor alternativa</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32">
+                    <img src="Imagenes\05_Rivadavia-vertical_fondo-azul.png" alt="Rivadavia Seguros" class="max-h-16">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32">
+                    <img src="Imagenes\logo-Cooperacion-Seguros-e1624560380948.jpg" alt="Cooperación Seguros" class="max-h-16">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-32">
+                    <img src="Imagenes\screenshot-2022-10-21-11-23-30-442-comadobereader-01.png" alt="El Norte Seguros" class="max-h-16">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-700 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Excelente atención de Francisco y Fernanda. Me asesoraron perfectamente para asegurar mi negocio y encontraron la mejor opción para mis necesidades."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50?text=CL" alt="Cliente" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Carlos López</p>
+                            <p class="text-blue-200 text-sm">Dueño de comercio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-700 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Cuando tuve un siniestro con mi auto, FyF me acompañó en todo el proceso. Su gestión fue impecable y rápida. Los recomiendo totalmente."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50?text=MG" alt="Cliente" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">María González</p>
+                            <p class="text-blue-200 text-sm">Cliente desde 2015</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-700 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Contraté el ART para mi empresa con FyF y la diferencia en el servicio es notable. Siempre disponibles para resolver cualquier consulta."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50?text=JP" alt="Cliente" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Juan Pérez</p>
+                            <p class="text-blue-200 text-sm">Empresario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Contactanos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos para asesorarte y resolver todas tus dudas sobre seguros</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-bold text-blue-900 mb-6">Envianos tu consulta</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="tu@email.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="3564601562">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Servicio de interés</label>
+                                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="patrimoniales">Seguros Patrimoniales</option>
+                                    <option value="vida">Seguros de Vida</option>
+                                    <option value="art">ART</option>
+                                    <option value="automotores">Seguros Automotores</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Tu mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Enviar consulta</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="space-y-8">
+                        <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                            <h3 class="text-xl font-bold text-blue-900 mb-6">Información de contacto</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                    </div>
+                                    <p class="ml-4 text-gray-700">Bv. Saén Peña 1256, San Francisco, Córdoba</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-phone-alt text-blue-600"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="text-gray-700">Francisco: <a href="https://wa.me/5493564628562" class="text-blue-600 hover:underline">3564-628562</a></p>
+                                        <p class="text-gray-700 mt-1">Fernanda: <a href="https://wa.me/5493564628564" class="text-blue-600 hover:underline">3564-628564</a></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-envelope text-blue-600"></i>
+                                    </div>
+                                    <p class="ml-4 text-gray-700"><a href="mailto:fyfproductoresdeseguros@gmail.com" class="text-blue-600 hover:underline">fyfproductoresdeseguros@gmail.com</a></p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fab fa-instagram text-blue-600"></i>
+                                    </div>
+                                    <p class="ml-4 text-gray-700"><a href="https://www.instagram.com/fyf.productoresdeseguros/" target="_blank" class="text-blue-600 hover:underline">@fyf.productoresdeseguros</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                            <h3 class="text-xl font-bold text-blue-900 mb-6">Horario de atención</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-700">Lunes a Viernes</span>
+                                    <span class="font-medium">8:30 - 15:00</span>
+                                    <span class="text-gray-700">Sabados</span>
+                                    <span class="font-medium">Cerrado</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.185503889137!2d-62.0841197!3d-31.4361713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb2804adb6f88b%3A0x194468990866fc24!2sF%20%26%20F%20Productores%20Asesores%20de%20Seguros!5e0!3m2!1ses!2sar!4v1689876543210!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FyF Productores de Seguros</h3>
+                    <p class="text-blue-200">Asesoramiento profesional en seguros para personas y empresas desde 2004.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Servicios</h3>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#servicios" class="hover:text-white transition duration-300">Seguros Patrimoniales</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition duration-300">Seguros de Vida</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition duration-300">ART</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition duration-300">Seguros Automotores</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <ul class="space-y-2 text-blue-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
+                            <span>Bv. Saén Peña 1256, San Francisco, Cba.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            <span>3564-6285626 / 3564-628564</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <span>fyfproductoresdeseguros@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Seguinos</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/fyf.productoresdeseguros/" target="_blank" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5493564628562" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300 text-sm">
+                <p>© 2025 FyF Productores de Seguros. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Botón Modo Oscuro -->
+    <button id="toggle-dark" class="fixed bottom-8 left-8 w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-700 transition duration-300 z-50" title="Modo oscuro/claro">
+        <i id="dark-icon" class="fas fa-moon"></i>
+    </button>
+    <script src="js\app.js"></script>
+</body>
+</html>
