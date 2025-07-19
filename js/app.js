@@ -123,3 +123,24 @@
             setTimeout(() => feedback.remove(), 1200);
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  var wspBtn = document.getElementById('wsp-send');
+  if(wspBtn) {
+    wspBtn.onclick = function() {
+      const nombre = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefono = document.getElementById('phone').value.trim();
+      const servicio = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+      const mensaje = document.getElementById('message').value.trim();
+      let text = `Hola! Quiero hacer una consulta:\n`;
+      if(nombre) text += `Nombre: ${nombre}\n`;
+      if(email) text += `Email: ${email}\n`;
+      if(telefono) text += `Teléfono: ${telefono}\n`;
+      if(servicio && servicio !== 'Selecciona un servicio') text += `Servicio de interés: ${servicio}\n`;
+      if(mensaje) text += `Mensaje: ${mensaje}`;
+      const url = `https://wa.me/5493564628562?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    };
+  }
+});
