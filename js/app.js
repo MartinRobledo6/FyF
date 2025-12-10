@@ -1,149 +1,84 @@
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. Modo Oscuro ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
 
-        // Back to top button
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.remove('hidden');
-            } else {
-                backToTopBtn.classList.add('hidden');
-            }
-        });
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Modo oscuro
-        const toggleDarkBtn = document.getElementById('toggle-dark');
-        const darkIcon = document.getElementById('dark-icon');
-        let darkMode = false;
-        toggleDarkBtn.addEventListener('click', () => {
-            darkMode = !darkMode;
-            // Body
-            document.body.classList.toggle('bg-gray-900', darkMode);
-            document.body.classList.toggle('text-white', darkMode);
-            document.body.classList.toggle('bg-gray-50', !darkMode);
-
-            // Navbar y footer
-            document.querySelectorAll('nav, footer').forEach(el => {
-                el.classList.toggle('bg-gray-900', darkMode);
-                el.classList.toggle('bg-white', !darkMode);
-                el.classList.toggle('text-white', darkMode);
-            });
-
-            // Secciones y tarjetas
-            document.querySelectorAll('.bg-white').forEach(el => {
-                el.classList.toggle('bg-gray-800', darkMode);
-                el.classList.toggle('text-white', darkMode);
-                el.classList.toggle('bg-white', !darkMode);
-            });
-            document.querySelectorAll('.bg-gray-50').forEach(el => {
-                el.classList.toggle('bg-gray-900', darkMode);
-                el.classList.toggle('text-white', darkMode);
-                el.classList.toggle('bg-gray-50', !darkMode);
-            });
-
-            // Enlaces y textos
-            document.querySelectorAll('a, p, h1, h2, h3, h4, h5, h6, span, li, label, input, textarea, select, .text-blue-900, .text-blue-600, .text-gray-700, .text-gray-600, .text-blue-200').forEach(el => {
-                if (darkMode) {
-                    el.classList.add('text-gray-200');
-                    el.classList.remove('text-blue-900', 'text-blue-600', 'text-gray-700', 'text-gray-600', 'text-blue-200');
-                } else {
-                    el.classList.remove('text-gray-200');
-                }
-            });
-
-            // Botones
-            document.querySelectorAll('button, .bg-blue-600, .hover\:bg-blue-700').forEach(el => {
-                if (darkMode) {
-                    el.classList.add('bg-gray-700');
-                    el.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                } else {
-                    el.classList.remove('bg-gray-700');
-                    el.classList.add('bg-blue-600');
-                }
-            });
-
-            // Cambia el ícono
-            if (darkMode) {
-                darkIcon.classList.remove('fa-moon');
-                darkIcon.classList.add('fa-sun');
-            } else {
-                darkIcon.classList.remove('fa-sun');
-                darkIcon.classList.add('fa-moon');
-            }
-        });
-    // Animaciones fade-in al hacer scroll
-    function revealOnScroll() {
-        document.querySelectorAll('.fade-in').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 60) {
-                el.classList.add('visible');
-            }
-        });
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+    } else {
+        html.classList.remove('dark');
     }
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('DOMContentLoaded', revealOnScroll);
 
-    // Microinteracción copiar teléfono
-    document.querySelectorAll('.text-blue-600').forEach(el => {
-        if (el.classList.contains('hover:underline')) {
-            el.addEventListener('click', function(e) {
-                e.preventDefault();
-                const text = el.textContent;
-                navigator.clipboard.writeText(text);
-                let feedback = document.createElement('span');
-                feedback.className = 'copy-feedback visible';
-                feedback.textContent = 'Copiado';
-                el.parentElement.appendChild(feedback);
-                setTimeout(() => feedback.remove(), 1200);
-            });
+    themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        if (html.classList.contains('dark')) {
+            localStorage.theme = 'dark';
+        } else {
+            localStorage.theme = 'light';
         }
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-  var wspBtn = document.getElementById('wsp-send');
-  if(wspBtn) {
-    wspBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const telefono = document.getElementById('phone').value.trim();
-      const servicio = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
-      const mensaje = document.getElementById('message').value.trim();
-      let text = `Hola! Quiero hacer una consulta:\n`;
-      if(nombre) text += `Nombre: ${nombre}\n`;
-      if(email) text += `Email: ${email}\n`;
-      if(telefono) text += `Teléfono: ${telefono}\n`;
-      if(servicio && servicio !== 'Selecciona un servicio') text += `Servicio de interés: ${servicio}\n`;
-      if(mensaje) text += `Mensaje: ${mensaje}`;
-      const url = `https://wa.me/5493564628562?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
+    // --- 2. Menú Móvil ---
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
-  }
+
+    // --- 3. Lógica del Formulario a WhatsApp ---
+    const form = document.getElementById('whatsapp-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const telefono = document.getElementById('telefono').value;
+        const servicio = document.getElementById('servicio').value;
+        // Capturamos el mensaje extra
+        const consulta = document.getElementById('mensaje').value;
+        
+        if (!nombre || !telefono) {
+            alert('Por favor, completa tu nombre y teléfono para poder contactarte.');
+            return;
+        }
+
+        // Construimos el mensaje para WhatsApp
+        let text = `Hola FyF, mi nombre es *${nombre}*.\n`;
+        text += `Me interesa saber más sobre: *${servicio}*.\n`;
+        text += `Mi teléfono es: ${telefono}.\n`;
+        
+        if (consulta) {
+            text += `Consulta: ${consulta}`;
+        }
+
+        const url = `https://wa.me/5493564628562?text=${encodeURIComponent(text)}`;
+        
+        window.open(url, '_blank');
+    });
+
+    // --- 4. Efecto Scroll Navbar ---
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-md');
+        } else {
+            nav.classList.remove('shadow-md');
+        }
+    });
+
+    // --- 5. Botón Volver Arriba ---
+    const backBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backBtn.classList.remove('opacity-0', 'invisible');
+        } else {
+            backBtn.classList.add('opacity-0', 'invisible');
+        }
+    });
+
+    backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
